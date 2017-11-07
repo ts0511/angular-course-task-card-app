@@ -1,0 +1,33 @@
+.card {
+    border-radius: 0;
+    /*cursor: pointer;*/
+}
+
+.card,
+.card-footer {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0,0,0);   
+}
+.card.completed,
+.card.completed .card-footer,
+.card.completed .card-footer i {
+    background-color: rgb(179, 255, 182);
+    color: rgb(0, 173, 29);
+    border-color: rgb(0, 173, 29);
+} 
+
+
+.card-footer {
+    text-align: right;
+}
+.card-footer i {
+    color: #cc0000;
+    padding-right: .5rem;
+    cursor: pointer;
+}
+.card-close {
+    text-align: right;
+    color: #cc0000;
+    padding-right: .5rem;
+    cursor: pointer;
+}
