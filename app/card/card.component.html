@@ -1,14 +1,16 @@
 <div class="col-sm-3">
-    <div class="card" [class.completed]="task.completed">
-        <div class="card-close">
-                <span><i class="fa fa-times" aria-hidden="true" (click)="taskDeleted()"></i></span>
-        </div>
-        <div class="card-block">
-            <p>{{ task.content }}</p>
-        </div>
-        <div class="card-footer">
-            <span *ngIf="!task.completed"><i class="fa fa-times" aria-hidden="true" (click)="statusToggle()"></i>Not Complete</span>
-            <span [hidden]="!task.completed"><i class="fa fa-check" aria-hidden="true" (click)="statusToggle()"></i>Completed</span>
-        </div>
+    <div class="card" *ngIf="!task.deleted" [class.completed]="task.completed" [class.deleted]="task.deleted">
+        <span>
+            <div class="card-close">
+                    <span><i class="fa fa-times" aria-hidden="true" (click)="taskDelete()"></i></span>
+            </div>
+            <div class="card-block">
+                <p>{{ task.content }}</p>
+            </div>
+            <div class="card-footer">
+                <span *ngIf="!task.completed"><i class="fa fa-times" aria-hidden="true" (click)="statusToggle()"></i>Not Complete</span>
+                <span [hidden]="!task.completed"><i class="fa fa-check" aria-hidden="true" (click)="statusToggle()"></i>Completed</span>
+            </div>
+        </span>
     </div>
 </div>

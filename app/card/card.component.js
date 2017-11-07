@@ -16,6 +16,11 @@ var CardComponent = (function () {
     CardComponent.prototype.statusToggle = function () {
         this.task.completed = !this.task.completed;
     };
+    CardComponent.prototype.taskDelete = function () {
+        /*this.task.deleted = !this.task.deleted;*/
+    };
+    CardComponent.prototype.remove = function () {
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', task_1.Task)

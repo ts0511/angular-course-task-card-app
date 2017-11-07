@@ -13,15 +13,12 @@ var task_1 = require("./model/task");
 var AppComponent = (function () {
     function AppComponent() {
         this.tasks = [];
-        this.currentTask = new task_1.Task(null, false);
+        this.currentTask = new task_1.Task(null, false, false);
     }
     AppComponent.prototype.addTask = function () {
-        var task = new task_1.Task(this.currentTask.content, this.currentTask.completed);
+        var task = new task_1.Task(this.currentTask.content, this.currentTask.completed, this.currentTask.deleted);
         this.tasks.push(task);
         this.currentTask.content = null;
-    };
-    AppComponent.prototype.deleteTask = function () {
-        this.tasks.splice(0);
     };
     AppComponent = __decorate([
         core_1.Component({
